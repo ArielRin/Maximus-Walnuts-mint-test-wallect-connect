@@ -25,14 +25,31 @@ const maxxChain: Chain = {
   },
   testnet: false,
 };
+const bsc: Chain = {
+  id: 56, // BSC chain ID
+  name: 'Binance Smart Chain',
+  network: 'bsc',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Binance Coin',
+    symbol: 'BNB',
+  },
+  rpcUrls: {
+    default: 'https://bsc-dataseed.binance.org/',
+  },
+  blockExplorers: {
+    default: { name: 'BscScan', url: 'https://bscscan.com/' },
+  },
+  testnet: false,
+};
 
 const { chains, provider } = configureChains(
-  [maxxChain],
+  [bsc],
   [
     jsonRpcProvider({
       rpc: () => {
         return {
-          http: "https://rpc.maxxchain.org",
+          http: "https://bsc-dataseed.binance.org/",
         };
       },
     }),
@@ -41,7 +58,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "SafuMaxx Reward NFT",
+  appName: "Maxmum Walnuts Reward NFT",
   chains,
 });
 

@@ -118,7 +118,7 @@ function App() {
     <>
 
     <header>
-    <Text className="header-text">SafuMaxx Reward NFT</Text>
+    <Text className="header-text">Maxmum Walnuts Reward NFT</Text>
     <div className="connect-button">
       <ConnectButton />
     </div>
@@ -140,16 +140,16 @@ function App() {
           </div>
 
                                 <Text className="ttitle" style={{ textAlign: 'center', fontWeight: 'bolder' }}>
-                                  SafuMaxx Reward NFT
+                                  Maxmum Walnuts Reward NFT
                                 </Text>
             <Text className="paragraph1" style={{ textAlign: 'center', fontWeight: 'bold' }}>
-              SafuMaxx Reward NFTs , each priced at 2500 PWR. These non-fungible tokens offer a distinctive opportunity for collectors to own a piece of the SafuMaxx legacy.
+              Maxmum Walnuts Reward NFTs , each priced at 2500 PWR. These non-fungible tokens offer a distinctive opportunity for collectors to own a piece of the Maxmum Walnuts legacy.
             </Text>
             <Text className="paragraph1" style={{ textAlign: 'center', fontWeight: 'bold' }}>
               The collection boasts one legendary NFT, adding an element of exclusivity and rarity to the series.
             </Text>
               <Text className="paragraph1" style={{ textAlign: 'center', fontWeight: 'bold' }}>
-                With only a limited quantity available, each SafuMaxx Reward NFT becomes a coveted digital treasure, backed by the blockchain technology that ensures authenticity and scarcity.
+                With only a limited quantity available, each Maxmum Walnuts Reward NFT becomes a coveted digital treasure, backed by the blockchain technology that ensures authenticity and scarcity.
               </Text>
 
             <Text className="contractaddr" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
@@ -204,7 +204,7 @@ function App() {
             </Text>
           )}
             <Text className="paragraph1" style={{ color: 'white', padding: '20px', textAlign: 'center' }}>
-              &copy; 2023 SafuMaxx. All rights reserved.
+              &copy; 2023 Maxmum Walnuts. All rights reserved.
             </Text>
         </Container>
       </div>

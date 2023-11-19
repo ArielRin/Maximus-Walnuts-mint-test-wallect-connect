@@ -1,1 +1,1 @@
-# SafuMaxx Reward NFT
+# Maxmum Walnuts Reward NFT

@@ -5,6 +5,27 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+
+
+.logo {
+  width: 30%; /* 70% smaller than the original size */
+  height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.header-text {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #222; /* Change the background color as needed */
+  color: white;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -26,13 +47,18 @@ header {
   background-color: #222; /* Change the background color as needed */
 }
 .mainboxwrapper {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  background-color: rgba(12, 12, 12, 0.7); /* Change the background color as needed */
-  border-radius: 15px; /* Adjust the radius as needed */
-  padding-top: 15px;
-}
+    background-color: rgba(12, 12, 12, 0.7);
+    min-height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    margin-top: 40px;
 
 .bodywrapper {
   display: flex;
@@ -75,4 +101,23 @@ header {
 .supplynft {
   margin-top: 1px; /* Adjust the margin as needed */
   font-size: 24px; /* Adjust the font size as needed */
+}
+
+.logotextheader {
+  width: 10px; /* Adjust the width as needed */
+  height: 10px; /* Adjust the height as needed */
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.logo {
+  width: 30px; /* 70% smaller than the original size */
+  height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.logobody {
+  display: block; /* Ensures that the image is a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  padding: 20px; /* Add padding as needed */
 }

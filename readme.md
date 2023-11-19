@@ -1,1 +1,1 @@
-# Maxmum Walnuts Reward NFT
+# Maximus Walnuts Reward NFT

@@ -5,12 +5,12 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "SafuMaxx Reward NFT";
-const description = "SafuMaxx Reward NFT. 200 in total, with 1 legendary NFT up for grabs. Visit safumaxx.com for all the up to date knowledge of SafuMaxx.";
+const namePrefix = "Maximus Walnuts V.I.P NFT";
+const description = "Maximus Walnuts V.I.P NFT. 500 in total, with 10 Super NFT's up for grabs. ";
 const baseUri = "ipfs://QmcCPpWTL4FxwqXPJLPqRxBiucUd4ZtEtN2tJN7F4mZT98";
 
 const solanaMetadata = {
-  symbol: "SMR5",
+  symbol: "MaximusWalnuts",
   seller_fee_basis_points: 500, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "https://safumaxx.com/",
   creators: [
@@ -23,11 +23,15 @@ const solanaMetadata = {
 //modify to have clear layers to 200 creating metadata and rarities as requested
 const layerConfigurations = [
   {
-    growEditionSizeTo: 200,
+    growEditionSizeTo: 500,
     layersOrder: [
       { name: "Background" },
       { name: "Image" },
       { name: "Edition" },
+      { name: "Nuts" },
+      { name: "Roots" },
+      { name: "Leaves" },
+      { name: "Eats" },
     ],
   },
 ];

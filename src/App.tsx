@@ -8,6 +8,8 @@ import './styles.css'; // Reference to the external CSS file
 
 import backgroundGif from './Dream_Background.jpg';
 import HausLogo1 from './logo.png'; // Import your image file
+import MainTextLogo from './headerlogo.png'; // Import your image file
+
 
 const CONTRACT_ADDRESS = '0x172499980D37E6590b1bB7BFA0b51C64Dd34f84b'; // final address 2500 pwr ea LIVE
 const getExplorerLink = () => `https://bscscan.com/token/${CONTRACT_ADDRESS}`;
@@ -37,7 +39,7 @@ function App() {
       const [mintAmount, setMintQuantity] = useState(1);
 
       const calculateTotalPrice = () => {
-        const pricePerToken = 0.0001; // Adjust the price per token as needed
+        const pricePerToken = 4000000.0001; // Adjust the price per token as needed
         return ethers.utils.parseEther((mintAmount * pricePerToken).toString());
       };
 
@@ -121,7 +123,7 @@ function App() {
     fetchContractData();
   }, []); // Empty dependency array to run the effect only once
 
-  const maxSupply = 36;
+  const maxSupply = 500;
   const remainingSupply = maxSupply - totalSupply;
 
 
@@ -133,8 +135,7 @@ function App() {
   return (
     <>
       <header>
-        <img src={HausLogo1} alt="Maxmum Walnuts 2023 Logo" style={{ width: '2%', height: 'auto' }} />
-        <Text className="header-text">Maxmum Walnuts 2023</Text>
+          <img src={MainTextLogo} alt="Logo" className="logo" />
         <div className="connect-button">
           <ConnectButton />
         </div>
@@ -152,15 +153,10 @@ function App() {
         <div className="mainboxwrapper">
           <Container className="container" paddingY="4">
             <div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src={HausLogo1} alt="Haus Logo" style={{ width: '18%', height: 'auto' }} />
-            </div>
 
-              <Text className="ttitle" style={{ textAlign: 'center', fontWeight: 'bolder' }}>
-                Maxmum Walnuts
-              </Text>
+                  <img src={MainTextLogo} alt="Maximus Walnuts" className="logobody" />
               <Text className="paragraph1" style={{ textAlign: 'center', fontWeight: 'bold' }}>
-                Add my Description here once u think of what ya bloody making here to test
+                Welcome to the Maximus Walnuts VIP Rewards Club—a haven for nut enthusiasts! As a Max Wombat running with the Maximus Walnut team, you'll dive into a world of premium handpicked walnuts. Enjoy exclusive product launches, personalized gifts, and exceptional service. Join us for a walnut adventure like no other!
               </Text>
               <Text className="contractname" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
                 {loading ? 'Loading...' : `Contract Name: ${contractName || 'N/A'}`}
@@ -177,13 +173,17 @@ function App() {
                 </Link>
               </Text>
             </div>
+
+              <Text className="pricecost" style={{ textAlign: 'center', fontWeight: 'bolder' }}>
+                Approx $4 Billion in BNB test only
+              </Text>
             <Box marginTop='4' display='flex' alignItems='center' justifyContent='center'>
               <Button
                 marginTop='1'
                 textColor='white'
-                bg='#557729'
+                bg='#0c5cb6'
                 _hover={{
-                  bg: '#99d64b',
+                  bg: '#64c6ff',
                 }}
                 onClick={handleDecrement}
                 disabled={!isConnected || mintLoading || mintAmount === 1}
@@ -196,9 +196,9 @@ function App() {
               <Button
                 marginTop='1'
                 textColor='white'
-                bg='#557729'
+                bg='#0c5cb6'
                 _hover={{
-                  bg: '#99d64b',
+                  bg: '#64c6ff',
                 }}
                 onClick={handleIncrement}
                 disabled={!isConnected || mintLoading || mintAmount === 5}
@@ -215,9 +215,9 @@ function App() {
                 marginTop='6'
                 onClick={onMintClick}
                 textColor='white'
-                bg='#557729'
+                bg='#0c5cb6'
                 _hover={{
-                  bg: '#99d64b',
+                  bg: '#64c6ff',
                 }}
               >
                 {isConnected ? `Mint ${mintAmount} Now` : ' Mint on (Connect Wallet)'}
@@ -238,7 +238,7 @@ function App() {
                 <Link
                   isExternal
                   href={getOpenSeaURL()}
-                  color='#99d64b'
+                  color='#64c6ff'
                   textDecoration='underline'
                 >
                   Soon!
@@ -246,7 +246,7 @@ function App() {
               </Text>
             )}
               <Text className="paragraph1" style={{ color: 'white', padding: '20px', textAlign: 'center' }}>
-                &copy; Maxmum Walnuts 2023. All rights reserved.
+                &copy; Maximus Walnuts 2023. All rights reserved.
               </Text>
           </Container>
 

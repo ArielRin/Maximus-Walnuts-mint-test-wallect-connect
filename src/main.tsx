@@ -58,7 +58,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Maxmum Walnuts Reward NFT",
+  appName: "Maximus Walnuts Reward NFT",
   chains,
 });
 

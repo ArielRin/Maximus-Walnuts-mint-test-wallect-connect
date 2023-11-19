@@ -1,0 +1,1 @@
+# SafuMaxx Reward NFT

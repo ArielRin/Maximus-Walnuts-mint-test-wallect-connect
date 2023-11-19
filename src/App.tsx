@@ -11,7 +11,7 @@ import HausLogo1 from './logo.png'; // Import your image file
 import MainTextLogo from './headerlogo.png'; // Import your image file
 
 
-const CONTRACT_ADDRESS = '0x172499980D37E6590b1bB7BFA0b51C64Dd34f84b'; // final address 2500 pwr ea LIVE
+const CONTRACT_ADDRESS = '0x42142d58a5a4d7fAc22Fd2D3b5DBf46B04D5d16e';
 const getExplorerLink = () => `https://bscscan.com/token/${CONTRACT_ADDRESS}`;
 const getOpenSeaURL = () => `https://testnets.opensea.io/assets/goerli/${CONTRACT_ADDRESS}`;
 
@@ -39,7 +39,7 @@ function App() {
       const [mintAmount, setMintQuantity] = useState(1);
 
       const calculateTotalPrice = () => {
-        const pricePerToken = 4000000.0001; // Adjust the price per token as needed
+        const pricePerToken = 0.0102777; // Adjust the price per token as needed
         return ethers.utils.parseEther((mintAmount * pricePerToken).toString());
       };
 

@@ -1,4 +1,4 @@
-# Maximus Walnuts Reward NFT
+# Maximus Walnuts V.I.P NFT
 
-Inline-style:
+
 ![alt text](https://raw.githubusercontent.com/ArielRin/Maximus-Walnuts-mint-test-wallect-connect/master/src/twitter.png "NFT Minting")

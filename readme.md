@@ -4,4 +4,4 @@
 ![alt text](https://raw.githubusercontent.com/ArielRin/Maximus-Walnuts-mint-test-wallect-connect/master/src/twitter.png "NFT Minting")
 
 
-[Link to Dapp](https://www.google.com)
+[Link to Dapp](https://stunning-florentine-35bf7f.netlify.app/)

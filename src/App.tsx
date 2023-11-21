@@ -13,11 +13,13 @@ import MainTextLogo from './headerlogo.png'; // Import your image file
 
 const CONTRACT_ADDRESS = '0x42142d58a5a4d7fAc22Fd2D3b5DBf46B04D5d16e';
 const getExplorerLink = () => `https://bscscan.com/token/${CONTRACT_ADDRESS}`;
-const getOpenSeaURL = () => `https://testnets.opensea.io/assets/goerli/${CONTRACT_ADDRESS}`;
+const getOpenSeaURL = () => `https://opensea.io/assets/bsc/${CONTRACT_ADDRESS}`;
+const getTofuNFTURL = () => `https://opensea.io/assets/bsc/${CONTRACT_ADDRESS}`;
 
 function App() {
   const account = useAccount();
   const [contractName, setContractName] = useState('');
+  const [contractSymbol, setContractSymbol] = useState('');
   const [totalSupply, setTotalSupply] = useState(0); // Added state for totalSupply
   const [loading, setLoading] = useState(true);
 
@@ -37,6 +39,7 @@ function App() {
       const isConnected = !!address;
       const [mintedTokenId, setMintedTokenId] = useState(null);
       const [mintAmount, setMintQuantity] = useState(1);
+      const [pid, setCurrencyPid] = useState(1);
 
       const calculateTotalPrice = () => {
         const pricePerToken = 0.0102777; // Adjust the price per token as needed
@@ -44,7 +47,7 @@ function App() {
       };
 
       const handleIncrement = () => {
-        setMintQuantity((prevQuantity) => Math.min(prevQuantity + 1, 5));
+        setMintQuantity((prevQuantity) => Math.min(prevQuantity + 1, 20));
       };
 
       const handleDecrement = () => {
@@ -107,11 +110,15 @@ function App() {
         // Call the 'name' method on the contract
         const name = await contract.name();
 
+        // Call the 'name' method on the contract
+        const symbol = await contract.symbol();
+
         // Call the 'totalSupply' method on the contract
         const supply = await contract.totalSupply();
 
         // Update the state with the contract name and totalSupply
         setContractName(name);
+        setContractSymbol(symbol);
         setTotalSupply(supply.toNumber());
       } catch (error) {
         console.error('Error fetching contract data:', error);
@@ -159,14 +166,12 @@ function App() {
                 Welcome to the Maximus Walnuts VIP Rewards Club—a haven for nut enthusiasts! As a Max Wombat running with the Maximus Walnut team, you'll dive into a world of premium handpicked walnuts. Enjoy exclusive product launches, personalized gifts, and exceptional service. Join us for a walnut adventure like no other!
               </Text>
               <Text className="contractname" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
-                {loading ? 'Loading...' : `Contract Name: ${contractName || 'N/A'}`}
+                {loading ? 'Loading...' : `Introducing  ${contractName || 'N/A'}`}
               </Text>
-              <Text className="totalSupply" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
-                {loading ? 'Loading...' : `Sold : ${totalSupply} / ${maxSupply}  `}
+              <Text className="pricecost" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
+                {loading ? 'Loading...' : `${contractSymbol  || 'N/A'} Claimed : ${totalSupply} / ${maxSupply}  `}
               </Text>
-              <Text className="remainingSupply" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
-                {loading ? 'Loading...' : `Remaining Supply: ${remainingSupply}`}
-              </Text>
+
               <Text className="contractaddr" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
                 <Link isExternal href={getExplorerLink()}>
                   {CONTRACT_ADDRESS}
@@ -175,7 +180,7 @@ function App() {
             </div>
 
               <Text className="pricecost" style={{ textAlign: 'center', fontWeight: 'bolder' }}>
-                Approx $4 Billion in BNB test only
+                Approx $2.50 USD in BNB ea
               </Text>
             <Box marginTop='4' display='flex' alignItems='center' justifyContent='center'>
               <Button
@@ -201,7 +206,7 @@ function App() {
                   bg: '#64c6ff',
                 }}
                 onClick={handleIncrement}
-                disabled={!isConnected || mintLoading || mintAmount === 5}
+                disabled={!isConnected || mintLoading || mintAmount === 20}
               >
                 +
               </Button>
@@ -258,3 +263,7 @@ function App() {
 }
 
 export default App;
+
+// <Text className="remainingSupply" style={{ padding: '10px', textAlign: 'center', fontWeight: 'bold' }}>
+//   {loading ? 'Loading...' : `Remaining Supply: ${remainingSupply}`}
+// </Text>

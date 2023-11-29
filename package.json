@@ -16,6 +16,7 @@
     "framer-motion": "^6.3.13",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.19.0",
     "wagmi": "^0.5.8"
   },
   "devDependencies": {

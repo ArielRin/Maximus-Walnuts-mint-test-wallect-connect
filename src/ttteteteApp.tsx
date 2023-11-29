@@ -7,8 +7,8 @@ import abiFile from './abiFile.json';
 import backgroundGif from './bg.jpg';
 import HausLogo1 from './logo.png';
 
-const CONTRACT_ADDRESS = '0x1b7C6855d2f65ec78828fCa07cC9170088E1815c'; // final address 2500 pwr ea LIVE
-const getExplorerLink = () => `https://scan.maxxchain.org/token/${CONTRACT_ADDRESS}`;
+const CONTRACT_ADDRESS = '0x18Ed09D95dc7E670Eb917de97127445Cd7832Ed6'; // final address 2500 pwr ea LIVE
+const getExplorerLink = () => `https://bscscan.com/token/${CONTRACT_ADDRESS}`;
 
 function App() {
   const account = useAccount();

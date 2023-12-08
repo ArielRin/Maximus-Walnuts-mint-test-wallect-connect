@@ -25,9 +25,26 @@ const maxxChain: Chain = {
   },
   testnet: false,
 };
+// const bsc: Chain = {
+//   id: 56, // BSC chain ID
+//   name: 'Binance Smart Chain',
+//   network: 'bsc',
+//   nativeCurrency: {
+//     decimals: 18,
+//     name: 'Binance Coin',
+//     symbol: 'BNB',
+//   },
+//   rpcUrls: {
+//     default: 'https://bsc-dataseed.binance.org/',
+//   },
+//   blockExplorers: {
+//     default: { name: 'BscScan', url: 'https://bscscan.com/' },
+//   },
+//   testnet: false,
+// };
 const bsc: Chain = {
-  id: 56, // BSC chain ID
-  name: 'Binance Smart Chain',
+  id: 97, // BSC chain ID
+  name: 'BSC Testnet',
   network: 'bsc',
   nativeCurrency: {
     decimals: 18,
@@ -35,10 +52,10 @@ const bsc: Chain = {
     symbol: 'BNB',
   },
   rpcUrls: {
-    default: 'https://bsc-dataseed.binance.org/',
+    default: 'https://data-seed-prebsc-1-s3.binance.org:8545/',
   },
   blockExplorers: {
-    default: { name: 'BscScan', url: 'https://bscscan.com/' },
+    default: { name: 'BscScan', url: 'https://testnet.bscscan.com/' },
   },
   testnet: false,
 };
@@ -49,7 +66,7 @@ const { chains, provider } = configureChains(
     jsonRpcProvider({
       rpc: () => {
         return {
-          http: "https://bsc-dataseed.binance.org/",
+          http: "https://data-seed-prebsc-1-s3.binance.org:8545/",
         };
       },
     }),

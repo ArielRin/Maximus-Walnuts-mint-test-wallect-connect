@@ -1,12 +1,6 @@
 [
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_treasuryWallet",
-				"type": "address"
-			}
-		],
+		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
@@ -33,31 +27,6 @@
 			}
 		],
 		"name": "HorseEntered",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "raceId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "address[]",
-				"name": "winners",
-				"type": "address[]"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256[]",
-				"name": "percentages",
-				"type": "uint256[]"
-			}
-		],
-		"name": "WinnersDeclared",
 		"type": "event"
 	},
 	{
@@ -128,14 +97,9 @@
 				"internalType": "address[]",
 				"name": "_winners",
 				"type": "address[]"
-			},
-			{
-				"internalType": "uint256[]",
-				"name": "_percentageDistribution",
-				"type": "uint256[]"
 			}
 		],
-		"name": "declareWinnersAndPay",
+		"name": "declareWinners",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -185,56 +149,11 @@
 				"type": "uint256"
 			}
 		],
-		"name": "getFullRaceDetails",
+		"name": "getEnteredHorsesCount",
 		"outputs": [
 			{
 				"internalType": "uint256",
-				"name": "pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "description",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "specialGuestName",
-				"type": "string"
-			},
-			{
-				"internalType": "address[]",
-				"name": "enteredHorses",
-				"type": "address[]"
-			},
-			{
-				"internalType": "address[]",
-				"name": "winners",
-				"type": "address[]"
-			},
-			{
-				"internalType": "bool",
-				"name": "isOpen",
-				"type": "bool"
-			},
-			{
-				"internalType": "bool",
-				"name": "winnersDeclared",
-				"type": "bool"
-			},
-			{
-				"internalType": "bool",
-				"name": "fundsWithdrawn",
-				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "totalTicketsSold",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "totalRaceValue",
+				"name": "",
 				"type": "uint256"
 			}
 		],
@@ -286,32 +205,8 @@
 				"type": "uint256"
 			}
 		],
-		"name": "getRaceValue",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_raceId",
-				"type": "uint256"
-			}
-		],
 		"name": "getTicketsSold",
 		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
 			{
 				"internalType": "uint256",
 				"name": "",
@@ -413,25 +308,6 @@
 				"type": "uint256"
 			}
 		],
-		"name": "raceWithdrawn",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
 		"name": "races",
 		"outputs": [
 			{
@@ -490,19 +366,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_newTreasuryWallet",
-				"type": "address"
-			}
-		],
-		"name": "setTreasuryWallet",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "ticketCost",
 		"outputs": [
@@ -517,25 +380,6 @@
 	},
 	{
 		"inputs": [],
-		"name": "treasuryWallet",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_raceId",
-				"type": "uint256"
-			}
-		],
 		"name": "withdrawFunds",
 		"outputs": [],
 		"stateMutability": "nonpayable",
